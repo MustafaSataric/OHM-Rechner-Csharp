@@ -9,7 +9,7 @@ namespace OHMProjekt
         static void Main()
         {
             ConsoleKeyInfo taste;
-            Console.Title = "Ohm-Rechner V1.0 © Sataric Mustafa";
+            Console.Title = "Ohm-Rechner V1.0 © Semir Sljiivic";
             Console.SetWindowSize(50, 25);
             Console.SetBufferSize(50, 25);
 
@@ -463,4 +463,4 @@ namespace OHMProjekt
     }
 }
 
-//All rights reserved by Mustafa Sataric Developer of this project!!!!
+//All rights reserved by Semir Sljiivic Developer of this project!!!!
