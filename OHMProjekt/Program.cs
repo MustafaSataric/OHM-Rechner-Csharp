@@ -9,71 +9,130 @@ namespace OHMProjekt
         static void Main()
         {
             ConsoleKeyInfo taste;
-            Console.Title = "Ohm-Rechner V1.0 © Semir Sljiivic";
-            Console.SetWindowSize(50, 25);
-            Console.SetBufferSize(50, 25);
-
+            int selectedClass;
 
             do
             {
 
-                Hauptmethode();
-                var auswahl = Console.ReadLine();
+                selectedClass = Menue("Ohm Rechner", "Spannungs Rechner", "Widerstands Rechner", "Strom Rechner");
 
-                switch (auswahl)
+                switch (selectedClass)
                 {
-                    case "1":
+                    case 0:
                         SpannungsRechner();
                         break;
-                    case "2":
+                    case 1:
                         WiderstandsRechner();
                         break;
-                    case "3":
+                    case 2:
                         StromRechner();
                         break;
-                    default:
-                        Hauptmethode();
-                        break;
                 }
-                Console.SetCursorPosition(8, 18);
-                Console.WriteLine("\n\n Zum Hauptmenü zurückkehren => beliebige Taste");
-                Console.SetCursorPosition(8, 22);
-                Console.WriteLine(" oder Ende  => mit ESC");
 
                 taste = Console.ReadKey();
-            } while (taste.Key != ConsoleKey.Escape);
+            } while (selectedClass != -1);
         }
 
-        static void Hauptmethode()
+        public static int Menue(string title, params string[] options)
         {
-            Console.BackgroundColor = ConsoleColor.Yellow;
-            Console.ForegroundColor = ConsoleColor.Black;
-            Console.Clear();
-            Console.SetCursorPosition(8, 2);
-            Console.WriteLine("Berechnung nach Ohmschen Gesetz:");
-            Console.SetCursorPosition(8, 3);
-            Console.WriteLine(string.Empty.PadLeft(30, '='));
-            Console.SetCursorPosition(10, 5);
-            Console.WriteLine("Spannung     U:");
-            Console.SetCursorPosition(35, 5);
-            Console.WriteLine("< 1 >");
-            Console.SetCursorPosition(10, 8);
-            Console.WriteLine("Widerstand   R:");
-            Console.SetCursorPosition(35, 8);
-            Console.WriteLine("< 2 >");
-            Console.SetCursorPosition(10, 11);
-            Console.WriteLine("Strom        I:");
-            Console.SetCursorPosition(35, 11);
-            Console.WriteLine("< 3 >");
-            Console.SetCursorPosition(0, 13);
-            Console.WriteLine(string.Empty.PadLeft(Console.WindowWidth - Console.WindowLeft, '─'));
-            Console.SetCursorPosition(10, 15);
-            Console.WriteLine("Ihre Auswahl:");
-            Console.SetCursorPosition(35, 15);
-            Console.Write("<   >");
-            Console.SetCursorPosition(37, 15);
+            Console.SetWindowSize(70, 30);
+            Console.SetBufferSize(70, 30);
+            int startY = 8, currentSelection = 0;
+
+            ConsoleKey key;
+
+            Console.CursorVisible = false;
+
+            do
+            {
+                Console.Clear();
+                color(1);
+                Console.SetCursorPosition(Convert.ToInt32(Console.WindowWidth * 0.2), 3);
+                Console.WriteLine(title);
+                Console.SetCursorPosition(Convert.ToInt32(Console.WindowWidth * 0.2), 4);
+                Console.WriteLine(string.Empty.PadLeft(title.Length, '='));
+                Console.SetCursorPosition(0, Console.WindowHeight - 2);
+                Console.Write(string.Empty.PadLeft(Console.WindowWidth - Console.CursorLeft, '─'));
+                Console.SetCursorPosition(0, Console.WindowHeight - 1);
+                string textToEnter = "Enter - Auswählen | ↑ - Hoch | ↓ - Runter | ESC - Beenden";
+                Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + (textToEnter.Length / 2)) + "}", textToEnter));
+
+                Console.ResetColor();
+
+
+                for (int i = 0, z = 0; i < options.Length; i++, z = z + 2)
+                {
+                    Console.SetCursorPosition(((Console.WindowWidth / 2) - ("X. Option: " + options[0]).Length / 2), startY + z);
+                    if (i == currentSelection)
+                    {
+                        color(0);
+                    }
+
+
+                    string currentOption = (i + 1) + ". Option: " + options[i] + " ";
+                    Console.WriteLine(currentOption);
+
+                    Console.ResetColor();
+                    color(1);
+                }
+
+                key = Console.ReadKey(true).Key;
+
+                switch (key)
+                {
+                    case ConsoleKey.UpArrow:
+                        {
+                            if (currentSelection == 0)
+                            {
+                                currentSelection = options.Length - 1;
+                            }
+                            else
+                            {
+                                currentSelection--;
+                            }
+                            break;
+                        }
+                    case ConsoleKey.DownArrow:
+                        {
+
+                            if (currentSelection == options.Length - 1)
+                            {
+                                currentSelection = 0;
+                            }
+                            else
+                            {
+                                currentSelection++;
+                            }
+                            break;
+                        }
+                    case ConsoleKey.Escape:
+                        {
+                            return -1;
+                        }
+                }
+            } while (key != ConsoleKey.Enter);
+
+            Console.CursorVisible = true;
+
+            return currentSelection;
         }
-        static void SpannungsRechner()
+
+
+static int color(int choice)
+{
+    if (choice == 0)
+    {
+        Console.BackgroundColor = ConsoleColor.Yellow;
+        Console.ForegroundColor = ConsoleColor.DarkGray;
+    }
+    else if (choice == 1)
+    {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.BackgroundColor = ConsoleColor.DarkGray;
+    }
+    return 0;
+}
+static void SpannungsRechner()
         {
             double U = 1, R = 1, I = 1;
 

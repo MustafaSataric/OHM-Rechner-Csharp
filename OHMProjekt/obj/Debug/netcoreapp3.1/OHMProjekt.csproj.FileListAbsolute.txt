@@ -26,3 +26,17 @@ C:\Users\satar\OneDrive\Dokumente\C#\SataricMustafaOhmscherRechner\obj\Debug\net
 C:\Users\satar\OneDrive\Dokumente\C#\SataricMustafaOhmscherRechner\obj\Debug\netcoreapp3.1\OHMProjekt.dll
 C:\Users\satar\OneDrive\Dokumente\C#\SataricMustafaOhmscherRechner\obj\Debug\netcoreapp3.1\OHMProjekt.pdb
 C:\Users\satar\OneDrive\Dokumente\C#\SataricMustafaOhmscherRechner\obj\Debug\netcoreapp3.1\OHMProjekt.genruntimeconfig.cache
+C:\Users\satar\OneDrive\Dokumente\GitHub\OHM-Rechner-Csharp\OHMProjekt\bin\Debug\netcoreapp3.1\OHMProjekt.exe
+C:\Users\satar\OneDrive\Dokumente\GitHub\OHM-Rechner-Csharp\OHMProjekt\bin\Debug\netcoreapp3.1\OHMProjekt.deps.json
+C:\Users\satar\OneDrive\Dokumente\GitHub\OHM-Rechner-Csharp\OHMProjekt\bin\Debug\netcoreapp3.1\OHMProjekt.runtimeconfig.json
+C:\Users\satar\OneDrive\Dokumente\GitHub\OHM-Rechner-Csharp\OHMProjekt\bin\Debug\netcoreapp3.1\OHMProjekt.runtimeconfig.dev.json
+C:\Users\satar\OneDrive\Dokumente\GitHub\OHM-Rechner-Csharp\OHMProjekt\bin\Debug\netcoreapp3.1\OHMProjekt.dll
+C:\Users\satar\OneDrive\Dokumente\GitHub\OHM-Rechner-Csharp\OHMProjekt\bin\Debug\netcoreapp3.1\OHMProjekt.pdb
+C:\Users\satar\OneDrive\Dokumente\GitHub\OHM-Rechner-Csharp\OHMProjekt\obj\Debug\netcoreapp3.1\OHMProjekt.csproj.AssemblyReference.cache
+C:\Users\satar\OneDrive\Dokumente\GitHub\OHM-Rechner-Csharp\OHMProjekt\obj\Debug\netcoreapp3.1\OHMProjekt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\satar\OneDrive\Dokumente\GitHub\OHM-Rechner-Csharp\OHMProjekt\obj\Debug\netcoreapp3.1\OHMProjekt.AssemblyInfoInputs.cache
+C:\Users\satar\OneDrive\Dokumente\GitHub\OHM-Rechner-Csharp\OHMProjekt\obj\Debug\netcoreapp3.1\OHMProjekt.AssemblyInfo.cs
+C:\Users\satar\OneDrive\Dokumente\GitHub\OHM-Rechner-Csharp\OHMProjekt\obj\Debug\netcoreapp3.1\OHMProjekt.csproj.CoreCompileInputs.cache
+C:\Users\satar\OneDrive\Dokumente\GitHub\OHM-Rechner-Csharp\OHMProjekt\obj\Debug\netcoreapp3.1\OHMProjekt.dll
+C:\Users\satar\OneDrive\Dokumente\GitHub\OHM-Rechner-Csharp\OHMProjekt\obj\Debug\netcoreapp3.1\OHMProjekt.pdb
+C:\Users\satar\OneDrive\Dokumente\GitHub\OHM-Rechner-Csharp\OHMProjekt\obj\Debug\netcoreapp3.1\OHMProjekt.genruntimeconfig.cache
